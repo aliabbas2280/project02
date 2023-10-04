@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Set Method</title>
+    <style>
+        *{
+            padding: 0%;
+            margin: 0%;
+            box-sizing: border-box;
+        }
+
+        body{
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            font-weight: 600;
+            color: #272727;
+            background-color: blanchedalmond;
+            gap: 10px;
+
+        }
+            #div1{
+                width: 500px;
+                height: 600px;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 25px;
+                color: white;
+            }
+            #div2{
+                width: 500px;
+                height: 600px;
+                background-color: rgba(0, 0, 0, 0.5);
+                border-radius: 15px;
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+                padding: 25px;
+                color: white;
+            }
+            #heading{
+                font-size: 30px;
+                text-align: center;
+            }
+            #label-inp{
+                display: flex;
+                flex-direction: column;
+                gap: 10px;
+            }
+
+            #input-fields{
+                display: flex;
+                flex-direction: column;
+                gap: 20px;
+            }
+            label{
+                    font-size: 22px;
+            }
+            input{
+                width: 100%;
+                height: 40px;
+                border: none;
+                border-radius: 10px;
+                padding-left: 10px;
+                font-size: 16px;
+            }
+            #forget-rem{
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+
+            }
+            #rem{
+                display: flex;
+                gap: 5px;
+            }
+            #box{
+                width: 20px;
+                height: 20px;
+            }
+            #forget-rem a{
+                text-decoration: none;
+                color: #272727;
+            }
+            #forget-rem a:hover{
+                text-decoration: underline;
+            }
+            #btn{
+                width: 100%;
+                height: 40px;
+                color: white;
+                border-radius: 10px;
+                background-color: #272727;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin-top: 20px;
+            }
+            #btn:hover{
+                background-color: black;
+            }
+    </style>
+    <script src="./code.jquery.com_jquery-3.7.1.min.js"></script>
+</head>
+<body>
+    <div id="div1">
+        <div id="heading">LOGIN</div>
+        <div id="input-fields">
+            <div id="label-inp">
+                <label for="user">Username:</label>
+                <input type="text" name="" id="user">
+            </div>
+            <div id="label-inp">
+                <label for="pass">Password:</label>
+                <input type="text" name="" id="pass">
+            </div>
+            <div id="forget-rem">
+                <div id="forget"><a href="">Forget Password?</a></div>
+                <div id="rem"><a href="">Remember Me </a><input type="checkbox" name="" id="box"></div>
+            </div>
+            <div id="btn">Clear</div>
+        </div>
+        <div id="terms-cond">
+            <p style="font-size: 20px;">Lorem ipsum, dolor sit amet consectetur adipisicing.</p>
+        </div>
+    </div>
+    <div id="div2">
+        <h1>Lorem, ipsum dolor.</h1>
+        <ol>
+            <li>item 1</li>
+            <li>item 2</li>
+            <li>item 3</li>
+        </ol>
+        <p id="para1">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, vel.</p>
+        <p id="para2">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Modi, vel.</p>
+        <button id="btn2">Add Element</button>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#btn2').click(function(){
+                $('#para1').after('Text will appear btween Paragraphs.');
+            })
+        })
+    </script>
+
+    <script>
+        $(document).ready(function(){
+            $('#btn').click(function(){
+                $('#terms-cond p').html('<h1>Yes Text Has been Changed!!</h1>');
+                console.log('#terms-cond p');
+            })
+        })
+    </script>
+</body>
+</html>
